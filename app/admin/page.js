@@ -53,7 +53,7 @@ const Dashboard = () => {
     const categories = [
         'Laptop',
         'Mobile',
-        'Electronic Devices',
+        'Electronic',
         'Others'
     ];
 
@@ -103,7 +103,7 @@ const Dashboard = () => {
                         {categories.map((item, index) => (
                             <button
                                 key={index}
-                                className={` px-4 py-2 rounded-md text-sm font-medium bg-[black] text-white`}
+                                className={` px-2 md:px-4 py-2 rounded-md text-sm font-medium bg-[black] text-white`}
                                 onClick={() => setCategory(item)}
                             >
                                 {item}

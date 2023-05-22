@@ -39,7 +39,7 @@ const Update = ({params}) => {
     const categories = [
         'Laptop',
         'Mobile',
-        'Electronic Devices',
+        'Electronic',
         'Others'
     ];
 

@@ -26,10 +26,10 @@ const Header = () => {
 
     return (
         <>
-            <div className='h-28 flex justify-between items-center text-sm  font-opensans mx-16 cursor-pointer'>
+            <div className='h-28 flex justify-between items-center text-sm  font-Raleway mx-16 cursor-pointer'>
                 <div className='flex items-center gap-x-9'>
-                    <p className='font-extrabold text-lg'>Tax<span className='text-blue-700'>Pal</span></p>
-                    <p className='hover:text-pink-400 hidden md:block'><Link href={"/"}>Shop</Link></p>
+                    <p className='font-extrabold absolute left-4 font-Roboto text-lg'>Smart<span className='text-pink-400'>EShop</span></p>
+                    <p className='hover:text-pink-400 hidden ml-24 md:block'><Link href={"/"}>Shop</Link></p>
                     <p className='hover:text-pink-400 hidden md:block'><Link href={"/about"}>About</Link></p>
                 </div>
                 {isAuthenticated ? (

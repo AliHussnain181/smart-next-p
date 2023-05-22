@@ -56,7 +56,7 @@ const Product = () => {
     const categories = [
         'Laptop',
         'Mobile',
-        'Electronic Devices',
+        'Electronic',
         'Others'
     ];
 
@@ -71,12 +71,12 @@ const Product = () => {
                             type="text"
                             value={keyword}
                             onChange={e => setKeyword(e.target.value)}
-                            placeholder="Search"
+                            placeholder="Search..."
                             className="bg-white focus:outline-none  py-2 pr-8 rounded-md shadow-sm w-full"
                         />
-                        <button type="submit" className="ml-3">
+                        <div className="ml-3">
                             <FaSearch className="h-5 w-5 text-[white]" />
-                        </button>
+                        </div>
                     </div>
                 </form>
                 <section className=" w-full ">
@@ -97,9 +97,9 @@ const Product = () => {
                 </section>
             </div>
 
-            <div className="bg-gray-100 min-h-screen flex flex-col justify-center pt-11 items-center">
-                <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8 py-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+            <div className="bg-gray-100 mx-auto min-h-screen flex flex-col justify-center font-Roboto pt-4 items-center">
+                <div className="max-w-7xl  mx-auto px-4  sm:px-6 lg:px-8 py-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4  ">
                         {data.map((product) => (
                             <div
                                 key={product._id}
@@ -107,16 +107,17 @@ const Product = () => {
                             >
                                 <Link href={`/products/${product._id}`}>
 
-                                    <Image src={product.image} alt={product.name} width={250} height={250} className="w-full h-48 object-cover" />
+                                    <Image src={product.image} alt={product.name} width={250} height={250} className="w-32 h-32 mx-auto py-2" />
                                     <div className="px-4 py-2">
-                                        <h2 className="text-sm font-medium mb-2 line-clamp-2">{product.name}</h2>
-                                        <p className="text-gray-600 text-center">RS {product.price}</p>
+                                        <h2 className="text-sm mx-auto mb-2 line-clamp-2">{product.name}</h2>
+                                        <p className="text-[#0f0606] text-sm mx-auto text-center">US$ {product.price}</p>
+                                        <h2 className="text-xs mx-auto line-clamp-1  title-font text-amber-700 ">Only {product.quantity} left in stock</h2>
                                     </div>
                                 </Link >
-                                <div className='flex items-center gap-x-28 '>
+                                <div className='flex items-center gap-x-20 '>
 
                                     {user && user.role === 'admin' && (
-                                        <Link href={`/update/${product._id}`} className="text-2xl  cursor-pointer text-center py-11">
+                                        <Link href={`/update/${product._id}`} className="text-2xl  cursor-pointer text-center py-7">
                                             <div className='bg-black h-1 w-full'></div>
                                             <GiUpgrade />
                                         </Link>

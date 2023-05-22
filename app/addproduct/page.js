@@ -19,7 +19,7 @@ const AddProduct = () => {
     const categories = [
         'Laptop',
         'Mobile',
-        'Electronic Devices',
+        'Electronic',
         'Others'
     ];
 
